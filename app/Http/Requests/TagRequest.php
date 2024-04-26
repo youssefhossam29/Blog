@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TagRequest extends FormRequest
 {
@@ -27,4 +29,12 @@ class TagRequest extends FormRequest
             'tag'=>'required | unique:tags'
         ];
     }
+
+    // protected function failedValidation(Validator $validator)
+    // {
+    //     $errors = $validator->errors()->all();
+    //     //dd($errors);
+    //     Alert::error('Error Title', $errors);
+    //     return redirect()->back();
+    // }
 }
