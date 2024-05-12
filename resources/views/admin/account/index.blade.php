@@ -32,6 +32,7 @@
 
         </tbody>
       </table>
+      {{ $admins->links('pagination::bootstrap-4') }}
 
   </div>
 

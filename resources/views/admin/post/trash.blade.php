@@ -47,7 +47,7 @@
         </tbody>
       </table>
 
-    {{$trashedpost->links() }}
+    {{$trashedpost->links('pagination::bootstrap-4') }}
   </div>
   @endif
 

@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        $admins = User::where('is_admin' , '1')->get();
+        $admins = User::where('is_admin' , '1')->paginate(5);
         return view('admin.account.index', ['admins'=>$admins]);
     }
 

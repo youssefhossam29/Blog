@@ -7,7 +7,6 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Faker\Factory as Faker;
-use Illuminate\Support\Arr;
 
 class PostFactory extends Factory
 {
@@ -35,7 +34,7 @@ class PostFactory extends Factory
             'photo' =>  'uploads/posts/'.$image,
             'slug' =>  Str::random(15),
             'created_at' => now(),
-            'deleted_at' =>  Arr::random([ now(), null]),
+            'deleted_at' =>  $this->faker->randomElement( [now(), null] )
         ];
     }
 

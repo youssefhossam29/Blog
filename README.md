@@ -12,7 +12,7 @@ To get started with Blog Website , simply clone this repository to your local ma
     6- run DataSeeder that contains dummy data: php artisan db:seed --class=DataSeeder 
     7- Serve Your Application: php artisan serve
 
-    ** to login as admin use following cardinalties: 
+    ** to login as admin use following cardinalities: 
         email: admin1@gmail.com
         password: 123456
 

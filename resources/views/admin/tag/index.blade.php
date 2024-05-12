@@ -47,7 +47,8 @@
         </tbody>
       </table>
 
-    {{$all_tag->links() }}
+    {{ $all_tag->links('pagination::bootstrap-4') }}
+
   </div>
 
 @endsection

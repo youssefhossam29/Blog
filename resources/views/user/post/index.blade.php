@@ -50,7 +50,7 @@
         </tbody>
       </table>
 
-    {{$all_post->links() }}
+    {{$all_post->links('pagination::bootstrap-4') }}
   </div>
   @endif
 

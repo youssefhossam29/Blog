@@ -48,8 +48,8 @@
         </tbody>
       </table>
 
-    {{$all_post->links() }}
-  </div>
+      {{ $all_post->links('pagination::bootstrap-4') }}
+    </div>
   @endif
 
 @endsection

@@ -33,7 +33,7 @@
         </tbody>
       </table>
 
-    {{$tags->links() }}
+    {{$tags->links('pagination::bootstrap-4') }}
   </div>
 
 @endsection

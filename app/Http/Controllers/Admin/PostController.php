@@ -19,26 +19,26 @@ class PostController extends Controller
     public function tag_posts($tagId)
     {
         $tag = Tag::find($tagId);
-        $posts = $tag->post()->withTrashed()->get();     // $posts = tag->posts()->get()
+        $posts = $tag->post()->withTrashed()->paginate(5);     // $posts = tag->posts()->get()
         return view('admin.post.tagPosts', ['posts'=>$posts , 'tag'=>$tag]);
     }
 
     public function index()
     {
-        $all_post = Post::latest()->paginate(6);
+        $all_post = Post::latest()->paginate(5);
         return view('admin.post.index', ['all_post'=>$all_post]);
     }
 
     public function trash()
     {
-        $trashedpost = Post::onlyTrashed()->paginate(3);
+        $trashedpost = Post::onlyTrashed()->paginate(5);
         return view('admin.post.trash', ['trashedpost'=>$trashedpost]);
     }
 
 
     public function userTrash($userId)
     {
-        $trashedpost = Post::onlyTrashed()->where('user_id' , $userId)->paginate(3);
+        $trashedpost = Post::onlyTrashed()->where('user_id' , $userId)->paginate(5);
         return view('admin.post.trash', ['trashedpost'=>$trashedpost]);
     }
 

@@ -22,7 +22,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $all_post = Post::latest()->paginate(6);
+        $all_post = Post::latest()->paginate(5);
         return view('user.post.index', ['all_post'=>$all_post]);
     }
 
@@ -115,7 +115,7 @@ class PostController extends Controller
 
     public function trash_index()
     {
-        $trashedpost = Post::onlyTrashed()->where( 'user_id' , Auth::id() )->paginate(3);
+        $trashedpost = Post::onlyTrashed()->where( 'user_id' , Auth::id() )->paginate(5);
         return view('user.post.trash', ['trashedpost'=>$trashedpost]);
     }
 

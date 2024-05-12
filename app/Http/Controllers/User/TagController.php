@@ -18,7 +18,7 @@ class TagController extends Controller
     public function tag_posts($tagId)
     {
         $tag = Tag::find($tagId);
-        $posts = $tag->post;
+        $posts = $tag->post()->paginate(5);
         return view('user.tag.tagPosts', ['posts'=>$posts , 'tag'=>$tag]);
     }
 

@@ -12,14 +12,14 @@ class UserController extends Controller
     public function show($userId)
     {
         $profile = Profile::where('user_id' , $userId)->first();
-        $posts = Post::withTrashed()->where('user_id' , $userId)->paginate(6);
+        $posts = Post::withTrashed()->where('user_id' , $userId)->paginate(5);
         return view('admin.user.show')->with('profile',$profile)->with('posts',$posts);
     }
 
 
     public function index()
     {
-        $users = User::where('is_admin' , '0')->latest()->paginate(10);
+        $users = User::where('is_admin' , '0')->latest()->paginate(5);
         return view('admin.user.index', ['users'=>$users]);
     }
 
