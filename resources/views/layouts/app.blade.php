@@ -38,7 +38,7 @@
             <div class="container">
                 <div class="col-2 text-center">
                     @if(Auth::user() != null)
-                        @if (Route::current()->method == 'GET')
+                        @if (request()->method() === 'GET')
                             <a  class="btn btn-secondary text-white me-0" href="{{ (url()->previous()) }}">
                                 <i class="fa-regular fa-circle-left"></i> Back
                             </a>
