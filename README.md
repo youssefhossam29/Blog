@@ -1,5 +1,3 @@
-# Blog Website Repository
-
 # Blog Website  Repository
 
 Welcome to the official repository for **Blog Website**! This repository contains the source code and assets for our vibrant and engaging Blog platform.
