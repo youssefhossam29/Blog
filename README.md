@@ -20,7 +20,7 @@ To get started with the **Blog Website**, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/username/blog-website.git
+   git clone https://github.com/youssefhossam29/blog-website.git
    ```
 
 2. **Install Composer Dependencies:**
